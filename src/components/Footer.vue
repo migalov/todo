@@ -17,6 +17,8 @@ export default {
 
 <style lang="scss" scoped>
   .footer-app {
-    @apply flex justify-between py-[22px] px-5 rounded-b-[5px] bg-white border-t border-[#E3E4F1]
+    @apply flex justify-between py-[22px] px-5 sm:px-6 sm:py-4 rounded-b-[5px]
+    bg-white dark:bg-[#25273D] border-t border-[#E3E4F1] dark:border-[#393A4B]
+    text-[#9495A5] dark:text-[#5B5E7E] sm:text-[14px]
   }
 </style>

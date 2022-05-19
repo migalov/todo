@@ -33,14 +33,8 @@ export default {
 .custom-checkbox {
   &::before {
     content: "";
-    position: absolute;
-    top: -4px;
-    left: -4px;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    border: 1px solid #E3E4F1;
-    background-color: #fff;
+    @apply absolute top-[-4px] sm:top-[-6px] left-[-4px] sm:left-[-2px] w-5 sm:w-6 h-5 sm:h-6 rounded-[50%] border-[1px] border-[#E3E4F1] dark:border-[#393A4B]
+    bg-[#fff] dark:bg-[#25273D];
   }
 
   &:checked::before {
