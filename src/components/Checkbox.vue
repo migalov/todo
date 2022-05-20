@@ -2,7 +2,7 @@
   <input
     type="checkbox"
     class="custom-checkbox"
-    :id="id"
+    :data-id="id"
   />
 </template>
 
@@ -14,14 +14,6 @@ export default {
       required: true,
     },
   },
-  methods: {
-    // checkFlag() {
-    //   if (this.status) {
-    //     return 'checked'
-    //   }
-    //   else return ''
-    // }
-  }
 };
 </script>
 

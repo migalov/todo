@@ -1,7 +1,7 @@
 <template>
   <div class="tasks">
     <ul class="tasks-list">
-      <li v-for="(task, index) in data" :key="index" class="task-item">
+      <li v-for="(task, index) in allTodos" :key="id" class="task-item">
         <Checkbox :id="index" :checked="task.status" />
         <label :for="index">{{ task.title }}</label>
         <button class="task-delete"></button>
@@ -11,6 +11,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 import Checkbox from "./Checkbox.vue";
 export default {
   props: {
@@ -20,6 +21,9 @@ export default {
     },
   },
   components: { Checkbox },
+  computed: {
+    ...mapGetters(["allTodos"])
+  }
 };
 </script>
 
