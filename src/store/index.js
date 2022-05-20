@@ -17,12 +17,18 @@ export default createStore({
   actions: {
     addTodo({commit}, todo) {
       commit("add_todo", todo)
+    },
+    removeTodo({commit}, id) {
+      commit('remove_todo', id)
     }
   },
   mutations: {
     add_todo(state, todo) {
       state.todos.push(todo);
       console.log(todo);
+    },
+    remove_todo(state, id) {
+      state.todos = state.todos.filter((todo) => todo.id != id);
     }
   },
   modules: {
