@@ -3,7 +3,7 @@
     <Header />
     <TaskInput />
     <Inner />
-    <Filter :class="'sm:hidden flex'" />    
+    <Filter :class="'filter sm:hidden flex'" />    
   </main>
 </template>
 

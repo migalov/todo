@@ -33,7 +33,7 @@ import { v1 } from 'uuid';
       },
       addTodoI() {
         this.addTodo({
-          id: v1(),
+          id: `${v1()}`,
           title: this.todoText,
           status: this.todoStatus
         })

@@ -1,7 +1,7 @@
 <template>
   <div class="tasks">
     <ul class="tasks-list">
-      <li v-for="(task, index) in allTodos" :key="id" class="task-item">
+      <li v-for="(task, index) in allTodos" :key="index" id="{{ index }}" class="task-item">
         <Checkbox :id="index" :checked="task.status" />
         <label :for="index">{{ task.title }}</label>
         <button @click="removeTodo(task.id)" class="task-delete"></button>
@@ -14,15 +14,9 @@
 import { mapActions, mapGetters } from 'vuex';
 import Checkbox from "./Checkbox.vue";
 export default {
-  props: {
-    data: {
-      type: Array,
-      required: true,
-    },
-  },
   components: { Checkbox },
   computed: {
-    ...mapGetters(["allTodos"]),
+    ...mapGetters(["allTodos", "activeTodos"]),
   },
   methods: {
     ...mapActions(["removeTodo"])

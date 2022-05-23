@@ -1,10 +1,19 @@
 <template>
-  <ul :class="class" class="filter">
+  <ul>
     <li><button>All</button></li>
-    <li><button>Active</button></li>
+    <li><button @click="activeTodos(allTodos)">Active</button></li>
     <li><button>Completed</button></li>
   </ul>
 </template>
+
+<script>
+import { mapGetters } from 'vuex'
+export default {
+  methods: {
+    ...mapGetters(["allTodos", "activeTodos"]),
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 .filter {

@@ -2,7 +2,7 @@
   <footer class="footer-app">
     <span v-if="$store.state.todos.length > 0">{{ $store.state.todos.length }} items left</span>
     <span v-else>No items</span>
-    <Filter :class="'hidden sm:flex'" />
+    <Filter :class="'filter hidden sm:flex'" />
     <span>Clear Completed</span>
   </footer>
 </template>
